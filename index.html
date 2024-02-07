@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERSONAL PORTFOLIO WEBSITE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d89c675535.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/name.png" alt="logo" class="logo">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li> 
+              <li><a href="#">Resume/CV</a></li> 
+              <li><a href="#">Portfolio</a></li> 
+              <li><a href="#">Contact</a></li> 
+            </ul>
+        </nav>
+        <div class="header-text">
+        <p>SOFTWARE DEVELOPER</p>
+        <h1>Hi! I'm <span>Harita</span><br> Agarwal from Virginia.</h1>
+        </div>
+    </div>
+</div>
+<!---------------about---------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+               <img src="images/casual2.jpg" width="400" height="500"> 
+            </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                <p>As a dedicated and ambitious Computer Science student at Virginia Commonwealth University, I specialize in cybersecurity with a strong interest in mathematics, maintaining a 3.6 GPA. My academic journey is marked by a deep commitment to learning and a robust work ethic. Known for my adaptability and collaborative spirit, I have a keen interest in programming and problem-solving. Currently, I am honing my skills in C and have developed a solid foundation in Linux. My passion for technology extends beyond the classroom, as I actively seek opportunities to apply my knowledge in practical settings. My journey in computer science is driven by a desire to expand my skill set continuously. I am particularly fascinated by the challenges and innovations in the field of cybersecurity. The blend of analytical thinking and creativity required in this field aligns perfectly with my skills and interests.</p>
+            
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links"  onclick="opentab('experience')">Experience</p>
+            </div>
+            <div class="tab-contents active-tab" id="education">
+                <ul>
+                    <li><span>Virginia Commonwealth University</span><br>Bachelor of Science in Computer Science, Concentration in Cybersecurity<br>Expected Graduation: December 2024<br> GPA: 3.6 | Dean’s List: Fall 2023</li>
+                    <li><span>J Sargent Reynolds Community College</span><br>Associate of Science in Computer Science<br>Graduation Date: May 2022<br>
+                        GPA: 3.9 Summa Cum Laude | Dean’s List: Fall 2020, Spring 2021, Fall 2021, Spring 2022</li>
+                    <li><span>CodeRVA Regional High School</span><br>GPA: 3.8<br> Graduation June 2022</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="skills">
+                <ul>
+                    <li><span>Programming Languages</span><br> Python, Java, C, SQL, HTML, CSS, JavaScript</li>
+                    <li><span>Tools & Platforms</span><br> Linux, Unix, Microsoft Azure, GitHub, MySQL, PyCharm, IntelliJ, VS Code</li>
+                    <li><span>Certifications</span><br>Microsoft Azure AI-900, Introduction to Data Science by CISCO, Learning Linux Command Line, Cybersecurity Foundations </li>
+                    <li><span>Languages</span><br> Fluent in written and spoken in Hindi and English</li>
+                    <li><span>Additional skills</span><br>Strong analytical and problem-solving abilities, excellent communication and teamwork skills, and detail-oriented</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>Senior Design Project: Executive Dashboard
+                    </span><br>Sponsored by Capital One<br>Collaborated with a team to develop a dashboard for data visualization and management using Single Sign-On, enhancing data accessibility for executives.  </li>
+                    <li><span>Web Development Intern</span><br>Christian’s Pizza, Tuckahoe, VA <br> Led a team redesign of the website, applying agile methodologies to improve user experience and functionality, showcasing leadership and project management skills. </li>
+                    <li><span>CodeScape</span><br>VCU MegaHack Hackathon<br>Worked with a team of four to create a website called CodeScape to convert your pseudocode into actual code using modern-day AI.   </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------Resume/CV-------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">Resume/CV</h1>
+        <div class="services-list">
+           <div>
+            <h2>Web Development</h2>
+            <p>Proficient in both front-end and back-end development, capable of building complete web applications from scratch. Skilled in server-side scripting languages like Node.js, Python, and PHP for building robust back-end systems.</p>
+           <a href="#"> learn more</a>
+        </div> 
+        <div>
+            <h2>Database Management</h2>
+            <p>Strong understanding of database design principles and proficient in working with both SQL and NoSQL databases. Experience in using relational databases such as MySQL, as well as non-relational databases like DynamoBD.</p>
+           <a href="#"> learn more</a>
+        </div> 
+        <div>
+            <h2>Restful API Development</h2>
+            <p>Experienced in designing and implementing RESTful APIs to facilitate communication between the front-end and back-end systems. Proficient in utilizing frameworks like Flask to develop scalable and efficient API endpoints.</p>
+           <a href="#"> learn more</a>
+        </div> 
+        <div>
+            <h2>DevOps and Deployment</h2>
+            <p>Familiar with cloud platforms such as AWS and Microsoft Azure for deploying and managing web applications. Experience in containerization technologies like Docker and orchestration tools such as Kubernetes for container deployment and management. Experience in CI/CD pipelines setup using tools like Jenkins, and GitHub Actions for automating the deployment process.</p>
+           <a href="#"> learn more</a>
+        </div> 
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
