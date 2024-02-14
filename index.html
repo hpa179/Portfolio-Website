@@ -12,13 +12,16 @@
     <div class="container">
         <nav>
             <img src="images/name.png" alt="logo" class="logo">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li> 
-              <li><a href="#">Resume/CV</a></li> 
-              <li><a href="#">Portfolio</a></li> 
-              <li><a href="#">Contact</a></li> 
+            <ul id="sidemenu">
+              <li><a href="#header">Home</a></li>
+              <li><a href="#about">About</a></li> 
+              <li><a href="#services">Expertise</a></li> 
+              <li><a href="#resume/cv">Resume/CV</a></li> 
+              <li><a href="#portfolio">Portfolio</a></li> 
+              <li><a href="#contact">Contact</a></li> 
+              <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
         <p>SOFTWARE DEVELOPER</p>
@@ -71,34 +74,115 @@
         </div>
     </div>
 </div>
-<!------------Resume/CV-------->
+<!------------Expertises-------->
 <div id="services">
     <div class="container">
-        <h1 class="sub-title">Resume/CV</h1>
+        <h1 class="sub-title">Expertise</h1>
         <div class="services-list">
            <div>
+            <i class="fa-brands fa-app-store"></i>
             <h2>Web Development</h2>
             <p>Proficient in both front-end and back-end development, capable of building complete web applications from scratch. Skilled in server-side scripting languages like Node.js, Python, and PHP for building robust back-end systems.</p>
-           <a href="#"> learn more</a>
+           <a href="#"> Learn more</a>
         </div> 
         <div>
+            <i class="fa-solid fa-database"></i>
             <h2>Database Management</h2>
             <p>Strong understanding of database design principles and proficient in working with both SQL and NoSQL databases. Experience in using relational databases such as MySQL, as well as non-relational databases like DynamoBD.</p>
-           <a href="#"> learn more</a>
+           <a href="#"> Learn more</a>
         </div> 
         <div>
+            <i class="fa-solid fa-code"></i>
             <h2>Restful API Development</h2>
             <p>Experienced in designing and implementing RESTful APIs to facilitate communication between the front-end and back-end systems. Proficient in utilizing frameworks like Flask to develop scalable and efficient API endpoints.</p>
-           <a href="#"> learn more</a>
+           <a href="#"> Learn more</a>
         </div> 
         <div>
+            <i class="fa-solid fa-cloud"></i>
             <h2>DevOps and Deployment</h2>
             <p>Familiar with cloud platforms such as AWS and Microsoft Azure for deploying and managing web applications. Experience in containerization technologies like Docker and orchestration tools such as Kubernetes for container deployment and management. Experience in CI/CD pipelines setup using tools like Jenkins, and GitHub Actions for automating the deployment process.</p>
-           <a href="#"> learn more</a>
+           <a href="#"> Learn more</a>
         </div> 
         </div>
     </div>
 </div>
+<!----------resume/CV---->
+<div id="resume/cv">
+<div class="resume">
+    <h1 class="sub-title">Resume/Cover Letter</h1>  
+    <a href="images/generic cv.pdf" download class="btn btn2">Download CV</a>
+    <a href="images/Resume-op.pdf" download class="btn btn2">Download Resume</a>
+</div>
+</div>
+<!----------portfolio---->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1> 
+        <div class="work-list">
+            <div class="work">
+               <img  src="images/website1.png"/>
+               <div class="layer">
+                <h3>Mental Health Website</h3>
+                <p>This Flask web app focuses on mental health awareness, allowing users to read articles, submit comments, and contact.</p>
+                <a href='#'><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+               </div>
+            </div>
+            <div class="work">
+                <img  src="images/codescape website.png"/>
+                <div class="layer">
+                    <h3>CodeScape</h3>
+                    <p>CodeScape, a functional tool that converts your pseudocode into actual code using modern-day AI.</p>
+                    <a href='#'><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                   </div>
+             </div>
+             <div class="work">
+                <img  src="images/gymMS.png"/>
+                <div class="layer">
+                    <h3>Gym Managment System</h3>
+                    <p>Developed and implemented Gym Management System tailored specifically for fitness facilities, enhancing operational efficiency and member engagement.</p>
+                    <a href='#'><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                   </div>
+             </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+<!------------contact------------------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> haritaagarwal1@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +1(804)698-0582</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/harita-agarwal/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/hpa179"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://sway.cloud.microsoft/OTSgrPgVZt9NDatQ?ref=Link&loc=play"><i class="fa-solid fa-file"></i></a>
+                    <a href="file:///C:/Users/agarw/OneDrive/Documents/portfolio/myportfolio-github/Portfolio-Website/index.html#"><i class="fa-solid fa-link"></i></a>
+                </div>
+                <!-- <a href="" class="btn btn2">Download CV</a> -->
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required/>
+                    <input type="email" name="Email" placeholder="Your Email" required/>
+                    <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Harita. Made with <i class="fa-solid fa-heart"></i> by Easy Tutorials</p>
+    </div>
+</div>
+
+
+
+
 <script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
@@ -113,5 +197,32 @@
         document.getElementById(tabname).classList.add("active-tab");
     }
 </script>
+<script>
+    var sidemeu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemeu.style.right= "0";
+    }
+    function closemenu(){
+        sidemeu.style.right= "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzLJIjxCsqjNIEz4OMikpKki8B4SXRRivtLgyphdz2e3FwW3_Ph0FtZ6mSOZP59N2oqZg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+               msg.innerHTML="" 
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
